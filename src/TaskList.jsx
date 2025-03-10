@@ -16,14 +16,15 @@ function TaskList({ onTasksChange }) {
   });
   const [filter, setFilter] = useState('all');
   const [errorInput, setErrorInput] = useState(null);
-
+    
   useEffect(() => {
     fetchTasks();
-  }, []);
-
+  }, [fetchTasks]); // Agrega fetchTasks como dependencia
+  
   useEffect(() => {
-    syncWithCalendar(tasks);
-  }, [tasks]);
+    syncWithCalendar();
+  }, [syncWithCalendar]); // Agrega syncWithCalendar como dependencia
+  
 
   const fetchTasks = async () => {
     try {
