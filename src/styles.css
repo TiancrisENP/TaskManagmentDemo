@@ -1,0 +1,284 @@
+:root {
+  --primary-bg: #2c2f3f;
+  --secondary-bg: #242635;
+  --border-color: #3f4254;
+  --primary-color: #4CAF50;
+  --danger-color: #e74c3c;
+  --text-color: white;
+  --muted-text-color: #b4b6c4;
+  --button-hover: #3d8b40;
+  --radius: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px;
+}
+
+/* Contenedor principal de la aplicación */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Estilos para el formulario */
+form {
+  background-color: #2a2a3a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los inputs */
+input[type="text"], textarea, input[type="date"], input[type="time"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3a3a4f;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="number"]:focus {
+  outline: 2px solid #00ff2a;
+  box-shadow: 0 0 8px rgba(0, 255, 42, 0.4);
+}
+
+/* Estilo mejorado para el input hora */
+input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Contenedor de fecha y hora */
+.datetime-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Etiquetas dentro del contenedor */
+.datetime-inputs label {
+  flex: 1;
+  min-width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el botón */
+button {
+  background-color: #00ff2a;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #00cc22;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 204, 34, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Estilo para el encabezado de la lista */
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.task-list-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Contenedor del selector */
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #3a3a4f;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+select:focus {
+  outline: 2px solid #00ff2a;
+  box-shadow: 0 0 8px rgba(0, 255, 42, 0.4);
+}
+
+/* Lista de tareas */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Mensaje de no tareas */
+.no-tasks {
+  text-align: center;
+  padding: 20px;
+  background-color: #2a2a3a;
+  border-radius: 8px;
+  color: var(--muted-text-color);
+}
+
+/* Estilos para la tarea */
+.task-item {
+  background-color: #2a2a3a;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid #00ff2a;
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Encabezado de la tarea */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+/* Descripción de la tarea */
+.task-description {
+  color: var(--muted-text-color);
+  margin: 10px 0;
+}
+
+/* Detalles de la tarea */
+.task-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted-text-color);
+}
+
+.task-details p {
+  margin: 0;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Botón de eliminar */
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  width: auto;
+  padding: 8px 10px;
+  margin: 0;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Tareas completadas */
+.task-item.completed {
+  border-left-color: #27ae60;
+  opacity: 0.8;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: #27ae60;
+}
+
+/* Formulario dentro de task-form */
+.task-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+  
+  form {
+    max-width: 100%;
+  }
+  
+  .task-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .select-container {
+    width: 100%;
+  }
+  
+  select {
+    width: 100%;
+  }
+}

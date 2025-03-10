@@ -1,0 +1,106 @@
+/* Mejoras para la tabla del calendario */
+.rbc-calendar {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  color: var(--white);
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Mejora de los encabezados */
+.rbc-header {
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Mejorar la apariencia de las celdas */
+.rbc-month-view .rbc-day-bg, 
+.rbc-time-view .rbc-day-slot {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mejorar la apariencia de los eventos */
+.rbc-event {
+  background-color: var(--primary-button);
+  border-radius: 4px;
+  padding: 4px 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 0.9rem;
+}
+
+.rbc-event-content {
+  font-weight: 500;
+}
+
+.rbc-event:hover {
+  background-color: var(--primary-button-hover);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+/* Mejorar el día actual */
+.rbc-today {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Mejorar la hora actual */
+.rbc-current-time-indicator {
+  background-color: var(--primary-button);
+  height: 2px;
+}
+
+/* Mejorar los slots de tiempo */
+.rbc-timeslot-group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rbc-time-content {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rbc-time-content > * + * > * {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mejorar los estilos para el campo de hora en el formulario */
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3a3a4f;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="time"]:focus {
+  outline: 2px solid #00ff2a;
+  box-shadow: 0 0 8px rgba(0, 255, 42, 0.4);
+}
+
+/* Estilos para el campo de hora en el contenedor de fecha y hora */
+.datetime-inputs input[type="time"] {
+  flex: 1;
+  min-width: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #3a3a4f;
+  border: 2px solid #3f4254;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.datetime-inputs input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
